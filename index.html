@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Biophysics & Astrophysics Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Standard Professional Navigation Header -->
+    <header class="navbar">
+        <div class="logo">YOUR NAME</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#cv" class="btn-cv">View CV (PDF)</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- The Multi-Scale Hero Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Decoding complex dynamic systems across scale and time.</h1>
+                <p class="subtitle">I leverage biophysics, hardware engineering, data pipelines, and orbital mechanics to explore patterns from the nanoscale to the cosmic frontier.</p>
+            </div>
+
+            <!-- The Tidy Interactive Core -->
+            <div class="scale-widget">
+                <div class="slider-container">
+                    <label for="scaleSlider">Focal Scale: <span id="scaleDisplay">10⁻⁶ m (Microscale)</span></label>
+                    <input type="range" id="scaleSlider" min="1" max="4" value="2" step="1">
+                </div>
+                
+                <!-- Dynamic Scope Display Area -->
+                <div class="scope-display" id="scopeDisplayBox">
+                    <div class="scope-graphic" id="scopeGraphic">
+                        <!-- Tiny SVG graphic updates dynamically via JavaScript -->
+                        <svg viewBox="0 0 100 100" id="visualAsset">
+                            <circle cx="50" cy="50" r="30" stroke="#0055ff" stroke-width="2" fill="none"/>
+                            <path d="M 20 20 Q 50 80 80 20" stroke="#0055ff" stroke-width="1.5" fill="none" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <div class="scope-caption">
+                        <h3 id="scopeTitle">Bacterial Motility Biophysics</h3>
+                        <p id="scopeDesc">Modeling the hydrodynamic profiles and active matter trajectories of flagellated micro-organisms in fluid environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clean, Grid-Based Project Showcase (HR Friendly) -->
+        <section id="research" class="projects-section">
+            <h2>Core Research Pillars</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-step="1">
+                    <span class="tag">Nanoscale / Hardware</span>
+                    <h3>Two-Photon Hydrogel Microscope</h3>
+                    <p>Designed and aligned an optical ray-tracing layout utilizing a pulsed laser for deep-tissue stereolithography and 3D bioscaffolding.</p>
+                </div>
+                <div class="project-card active-card" data-step="2">
+                    <span class="tag">Microscale / Biophysics</span>
+                    <h3>Bacterial Motility & Active Matter</h3>
+                    <p>Analyzed fluid dynamics constraints and flagellar locomotion under changing physical viscosities using raw high-speed capture data.</p>
+                </div>
+                <div class="project-card" data-step="3">
+                    <span class="tag">Network Scale / Genomics</span>
+                    <h3>Psychiatric Disease Bioinformatics</h3>
+                    <p>Built high-dimensional transcriptomics pipelines mapping cell-line deviations within a neural and stem cell differentiation lab.</p>
+                </div>
+                <div class="project-card" data-step="4">
+                    <span class="tag">Cosmic Scale / Astrophysics</span>
+                    <h3>Exoplanet Atmospheric Modeling</h3>
+                    <p>Simulating planetary transit vectors and spectroscopy benchmarks to optimize search parameters for habitable atmospheric biosignatures.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
