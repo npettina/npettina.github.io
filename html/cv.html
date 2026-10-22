@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Noah Pettinari | Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="assets/custom_favicon.png">
+</head>
+
+<body>
+
+    <!-- Standard Professional Navigation Header -->
+    <header class="navbar">
+        <div class="logo">NOAH PETTINARI</div>
+        <nav>
+            <b><a href="html/about.html">About</a></b>
+            <a href="html/research.html">Research</a>
+            <a href="html/publications.html">Publications</a>
+            <a href="html/cv.html" class="btn-cv">View CV (PDF)</a>
+        </nav>
+    </header>
+
+    <main>
+        <style>
+            .pdfobject-container { height: 500px; border: 1px solid #ccc; }
+        </style>
+        <div id="my-pdf"></div>
+        <script src="https://unpkg.com/pdfobject"></script>
+        <script>PDFObject.embed("../assets/cv_oct_2026.pdf", "#my-pdf");</script>
+    </main>
+</body>
+
+</html>
