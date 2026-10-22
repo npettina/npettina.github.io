@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah Pettinari | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/custom_favicon.png">
 </head>
+
 <body>
 
     <!-- Standard Professional Navigation Header -->
     <header class="navbar">
         <div class="logo">NOAH PETTINARI</div>
         <nav>
+            <b><a href="index.html">Home</a></b>
             <a href="html/about.html">About</a>
             <a href="html/research.html">Research</a>
             <a href="html/publications.html">Publications</a>
@@ -35,7 +42,7 @@
             <!-- The Tidy Interactive Core -->
             <div class="scale-widget">
                 <div class="slider-container">
-                    <label for="scaleSlider">Research Scale: <span id="scaleDisplay">10⁻⁶ m (Bacteria)</span></label>
+                    <label for="scaleSlider">Research Scale: <span id="scaleDisplay">10⁻⁹ m (Nanoscale)</span></label>
                     <input type="range" id="scaleSlider" min="1" max="4" value="1" step="1">
                 </div>
                 
@@ -44,13 +51,15 @@
                     <div class="scope-graphic" id="scopeGraphic">
                         <!-- Tiny SVG graphic updates dynamically via JavaScript -->
                         <svg viewBox="0 0 100 100" id="visualAsset">
-                            <circle cx="50" cy="50" r="30" stroke="#0055ff" stroke-width="2" fill="none"/>
-                            <path d="M 20 20 Q 50 80 80 20" stroke="#0055ff" stroke-width="1.5" fill="none" opacity="0.4"/>
+                            <line x1="20" y1="50" x2="80" y2="50" stroke="#0055ff" stroke-width="3" />
+                            <circle cx="50" cy="50" r="6" fill="#ff2d55"/>
+                            <!-- <circle cx="50" cy="50" r="30" stroke="#0055ff" stroke-width="2" fill="none"/> -->
+                            <!-- <path d="M 20 20 Q 50 80 80 20" stroke="#0055ff" stroke-width="1.5" fill="none" opacity="0.4"/> -->
                         </svg>
                     </div>
                     <div class="scope-caption">
-                        <h3 id="scopeTitle">Bacterial Motility, Biophysics, and Modeling</h3>
-                        <p id="scopeDesc">Modeled behavior, interactions, and motility trajectories of flagellated bacteria in semi-fluid environments.</p>
+                        <h3 id="scopeTitle">Two-Photon Polymerization of Hydrogels</h3>
+                        <p id="scopeDesc">Developed and interfaced with a microscope compatible with two-photon polymerization and fluorescence microscopy to probe cellular properties.</p>
                     </div>
                 </div>
             </div>
@@ -60,12 +69,12 @@
         <section id="research" class="projects-section">
             <h2>Past Research</h2>
             <div class="projects-grid">
-                <div class="project-card" data-step="1">
+                <div class="project-card active-card" data-step="1">
                     <span class="tag">Nanoscale / Hardware / Software</span>
                     <h3>Two-Photon Polymerization for Cellular Characterization</h3>
                     <p>Constructed and aligned an optical system utilizing a pulsed NIR laser for hydrogel polymerization. Additionally custom-built a GUI for fine-tuned stage control and polymerization parameters.</p>
                 </div>
-                <div class="project-card active-card" data-step="2">
+                <div class="project-card" data-step="2">
                     <span class="tag">Bacteria / Biophysics / Modeling</span>
                     <h3>Bacterial Motility, Populations, and Modeling</h3>
                     <p>Characterized bacterial motility across several species and developed a SVM-based classifier to clarify species types in communal environments.</p>

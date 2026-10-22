@@ -3,12 +3,44 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 400; */
+    font-style: normal;
 }
 
 body {
-    background-color: #fbfbfd;
-    color: #1d1d1f;
+    /* background-color: #121726; */
+    /* background-image: radial-gradient(#dc9750, #121726); */
+    /* background: linear-gradient(to bottom in oklch, oklch(19.74% 0.0798 1.63) 0.0%, oklch(21.94% 0.0881 5.08) 3.2%, oklch(24.94% 0.0987 10.11) 6.5%, oklch(28.55% 0.1106 16.11) 9.7%, oklch(32.51% 0.1232 22.29) 12.9%, oklch(36.60% 0.1353 27.96) 16.1%, oklch(40.58% 0.1457 32.42) 19.4%, oklch(44.48% 0.1544 35.14) 22.6%, oklch(48.65% 0.1631 36.44) 25.8%, oklch(52.96% 0.1712 36.97) 29.0%, oklch(57.25% 0.1782 37.36) 32.3%, oklch(61.36% 0.1837 38.25) 35.5%, oklch(65.15% 0.1869 40.29) 38.7%, oklch(68.49% 0.1870 43.97) 41.9%, oklch(71.49% 0.1834 48.99) 45.2%, oklch(74.22% 0.1773 54.90) 48.4%, oklch(76.77% 0.1701 61.32) 51.6%, oklch(79.21% 0.1633 67.84) 54.8%, oklch(81.62% 0.1585 74.07) 58.1%, oklch(84.06% 0.1535 79.73) 61.3%, oklch(86.64% 0.1494 85.65) 64.5%, oklch(89.24% 0.1479 91.73) 67.7%, oklch(91.72% 0.1502 97.56) 71.0%, oklch(93.94% 0.1579 102.75) 74.2%, oklch(95.77% 0.1731 106.90) 77.4%, oklch(97.06% 0.1732 109.60) 80.6%, oklch(97.72% 0.1106 110.57) 83.9%, oklch(97.87% 0.1043 110.17) 87.1%, oklch(97.68% 0.1321 108.91) 90.3%, oklch(97.34% 0.1228 107.29) 93.5%, oklch(97.00% 0.1124 105.81) 96.8%, oklch(96.85% 0.1069 104.97) 100.0%); */
+    
+    background-color: #121726; /* Deep cosmos fallback */
+    background-image: 
+        /* 1. The Bright Stellar Core (Top-Right corner) */
+        radial-gradient(
+        circle at 85% 12%, 
+        rgba(245, 184, 120, 0.35) 0%, 
+        transparent 35%
+        ),
+    /* 2. The Expanding Solar Corona / Amber Glow */
+    radial-gradient(
+      circle at 85% 12%, 
+      rgba(220, 151, 80, 0.2) 0%, 
+      rgba(30, 38, 64, 0.6) 50%, 
+      transparent 75%
+    ),
+    /* 3. Deep Space Base Gradient */
+    radial-gradient(
+      circle at 50% 50%, 
+      #1e2640 0%, 
+      #121726 70%, 
+      #0a0d16 100%
+    );
+    background-attachment: fixed; /*fix position of gradients*/
+    min-height: 100vh;
+
+    color: #D1D5DB;
     line-height: 1.6;
 }
 
@@ -18,12 +50,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    background-color: rgba(251, 251, 253, 0.8);
+    background-color: #1e2640;/*rgba(251, 251, 253, 0.8);*/
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #e8e8ed;
+    border-bottom: 5px solid #000;
 }
 
 .logo {
@@ -33,18 +65,18 @@ body {
 
 nav a {
     text-decoration: none;
-    color: #515154;
+    color: #dc9750;
     margin-left: 2rem;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #000;
+    color: #845629;
 }
 
 .btn-cv {
-    border: 1px solid #1d1d1f;
+    border: 2px solid #dc9750;
     padding: 0.4rem 1rem;
     border-radius: 4px;
 }
@@ -69,13 +101,13 @@ nav a:hover {
 
 .subtitle {
     font-size: 1.15rem;
-    color: #6e6e73;
+    color: #8D96A8;
 }
 
 /* Interactive Slider Widget */
 .scale-widget {
-    background: #ffffff;
-    border: 1px solid #e8e8ed;
+    background: #dc965044;
+    border: 1px solid #dc9750;
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
@@ -90,14 +122,14 @@ nav a:hover {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #86868b;
+    color: #dc9750;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 #scaleSlider {
     width: 100%;
-    accent-color: #0f8641; /*#0055ff*/
+    accent-color: #dc9750; /*#0055ff*/
     cursor: pointer;
 }
 
@@ -105,7 +137,7 @@ nav a:hover {
     display: flex;
     gap: 1.5rem;
     align-items: center;
-    background: #f5f5f7;
+    background: #1e2640;
     padding: 1.5rem;
     border-radius: 8px;
     min-height: 140px;
@@ -114,9 +146,9 @@ nav a:hover {
 .scope-graphic {
     width: 80px;
     height: 80px;
-    background: #fff;
+    background: #D1D5DB;
     border-radius: 50%;
-    border: 1px solid #e8e8ed;
+    border: 1px solid #000;
     flex-shrink: 0;
     padding: 10px;
 }
@@ -128,7 +160,7 @@ nav a:hover {
 
 .scope-caption p {
     font-size: 0.9rem;
-    color: #6e6e73;
+    color: #8D96A8;
 }
 
 /* Clean, Safe Project Grid */
@@ -150,8 +182,8 @@ nav a:hover {
 }
 
 .project-card {
-    background: #ffffff;
-    border: 1px solid #e8e8ed;
+    background: #1e2640;
+    border: 2px solid #1e2640;
     border-radius: 8px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -161,27 +193,53 @@ nav a:hover {
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #86868b;
+    color: #43849e;
     display: inline-block;
     margin-bottom: 0.75rem;
 }
 
 .project-card h3 {
     font-size: 1.2rem;
+    color: #D1D5DB;
     margin-bottom: 0.5rem;
 }
 
 .project-card p {
     font-size: 0.9rem;
-    color: #6e6e73;
+    color: #8D96A8;
 }
 
 /* Highlight matching card visually when interacting with the slider */
 .active-card {
-    border-color: #0f8641; /*#0055ff*/;
+    border-color: #dc9750; /*#0055ff*/;
     box-shadow: 0 8px 30px rgba(0, 85, 255, 0.05);
 }
 
 @media(max-width: 768px) {
     .hero-section { grid-template-columns: 1fr; gap: 2rem; }
 }
+
+/* About Page */
+.about {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 5%;
+    /* display: grid; */
+    gap: 4rem;
+    align-items: center;
+}
+
+.about p {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    gap: 4rem;
+    align-items: center;
+    /* text-align: justify; */
+}
+
+/* .image {
+    max-width:550px;
+    border: 2px solid #1e2640;
+    
+} */
